@@ -1,0 +1,14 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:vm="clr-namespace:SIFTTest.ViewModel"
+                    xmlns:views="clr-namespace:SIFTTest.View">
+    <DataTemplate DataType="{x:Type vm:SelectImageViewModel}">
+        <views:SelectImageView/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:ImageViewerViewModel}">
+        <views:ImageViewer/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:PyramidImageViewerViewModel}">
+        <views:ImageViewer/>
+    </DataTemplate>
+</ResourceDictionary>

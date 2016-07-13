@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="SIFTTest.View.SelectImageView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="200" Width="400">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="36*"/>
+            <ColumnDefinition Width="116*"/>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="8*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="29*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="31*"/>
+            <RowDefinition Height="46*"/>
+            <RowDefinition Height="26*"/>
+            <RowDefinition Height="38*"/>
+        </Grid.RowDefinitions>
+        <Border BorderBrush="Gray" BorderThickness="1" Margin="-25" Grid.RowSpan="7" Grid.ColumnSpan="5" >
+            <Border.Effect>
+                <DropShadowEffect Opacity=".4" BlurRadius="10" Direction="225" ShadowDepth="3" />
+            </Border.Effect>
+        </Border>
+        <TextBox Name="ImagePath" Grid.Column="2" HorizontalAlignment="Left" Height="28" Margin="10,0,0,0" Grid.Row="1" TextWrapping="Wrap" Text="{Binding ImagePath}" VerticalAlignment="Top" Width="212"/>
+        <Button Command="{Binding BrowseCommand}" CommandParameter="{Binding ElementName=ImagePath}" Name="BtnBrowse" Content="Browse" Grid.Column="3" HorizontalAlignment="Left" Height="28" Margin="10,0,0,0" Grid.Row="1" VerticalAlignment="Top" Width="50"/>
+        <Label Name="ImageLabel" Content="Image" Grid.Column="1" HorizontalAlignment="Left" Height="28" Margin="10,0,0,0" Grid.Row="1" VerticalAlignment="Top" Width="52"/>
+        <Button Command="{Binding OpenCommand}" CommandParameter="{Binding ElementName=ImagePath}" Name="BtnOpen" Content="Ok" Grid.Column="2" HorizontalAlignment="Left" Height="27" Margin="63,0,0,0" Grid.Row="5" VerticalAlignment="Top" Width="79" Grid.RowSpan="2"/>
+        <Label Content="{Binding InfoTips}" Grid.Column="2" HorizontalAlignment="Left" Height="35" Margin="26,3,0,0" Grid.Row="6" VerticalAlignment="Top" Width="175" Foreground="Red"/>
+        <Label x:Name="ImageLabelForMatching" Content="Image" Grid.Column="1" HorizontalAlignment="Left" Height="28" Margin="10,3,0,0" Grid.Row="3" VerticalAlignment="Top" Width="52"/>
+        <TextBox x:Name="ImagePathForMatching" Grid.Column="2" HorizontalAlignment="Left" Height="28" Margin="10,3,0,0" Grid.Row="3" TextWrapping="Wrap" Text="{Binding ImagePathForMatching}" VerticalAlignment="Top" Width="212"/>
+        <Button Command="{Binding BrowseForMatchingCommand}" CommandParameter="{Binding ElementName=ImagePathForMatching}" x:Name="BtnBrowseForMatching" Content="Browse" Grid.Column="3" HorizontalAlignment="Left" Height="28" Margin="10,3,0,0" Grid.Row="3" VerticalAlignment="Top" Width="50"/>
+    </Grid>
+</UserControl>
