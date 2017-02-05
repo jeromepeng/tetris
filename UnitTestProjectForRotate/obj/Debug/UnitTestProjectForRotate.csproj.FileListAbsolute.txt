@@ -1,0 +1,9 @@
+C:\privateproject\Tetris\UnitTestProjectForRotate\bin\Debug\UnitTestProjectForRotate.dll
+C:\privateproject\Tetris\UnitTestProjectForRotate\bin\Debug\UnitTestProjectForRotate.pdb
+C:\privateproject\Tetris\UnitTestProjectForRotate\bin\Debug\Common.dll
+C:\privateproject\Tetris\UnitTestProjectForRotate\bin\Debug\Common.pdb
+C:\privateproject\Tetris\UnitTestProjectForRotate\obj\Debug\UnitTestProjectForRotate.csprojResolveAssemblyReference.cache
+C:\privateproject\Tetris\UnitTestProjectForRotate\obj\Debug\UnitTestProjectForRotate.dll
+C:\privateproject\Tetris\UnitTestProjectForRotate\obj\Debug\UnitTestProjectForRotate.pdb
+C:\privateproject\Tetris\UnitTestProjectForRotate\bin\Debug\Data.dll
+C:\privateproject\Tetris\UnitTestProjectForRotate\bin\Debug\Data.pdb

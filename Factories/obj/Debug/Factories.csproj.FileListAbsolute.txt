@@ -1,0 +1,22 @@
+c:\Users\administrator\documents\visual studio 2013\Projects\Tetris\Factories\bin\Debug\Factories.dll
+c:\Users\administrator\documents\visual studio 2013\Projects\Tetris\Factories\bin\Debug\Factories.pdb
+c:\Users\administrator\documents\visual studio 2013\Projects\Tetris\Factories\bin\Debug\Common.dll
+c:\Users\administrator\documents\visual studio 2013\Projects\Tetris\Factories\bin\Debug\Data.dll
+c:\Users\administrator\documents\visual studio 2013\Projects\Tetris\Factories\bin\Debug\Common.pdb
+c:\Users\administrator\documents\visual studio 2013\Projects\Tetris\Factories\bin\Debug\Data.pdb
+c:\Users\administrator\documents\visual studio 2013\Projects\Tetris\Factories\obj\Debug\Factories.csprojResolveAssemblyReference.cache
+c:\Users\administrator\documents\visual studio 2013\Projects\Tetris\Factories\obj\Debug\Factories.dll
+c:\Users\administrator\documents\visual studio 2013\Projects\Tetris\Factories\obj\Debug\Factories.pdb
+c:\Users\administrator\documents\visual studio 2013\Projects\Tetris\Factories\bin\Debug\GraphicsTool.dll
+c:\Users\administrator\documents\visual studio 2013\Projects\Tetris\Factories\bin\Debug\GraphicsTool.pdb
+C:\privateproject\Tetris\Factories\bin\Debug\Factories.dll
+C:\privateproject\Tetris\Factories\bin\Debug\Factories.pdb
+C:\privateproject\Tetris\Factories\bin\Debug\Common.dll
+C:\privateproject\Tetris\Factories\bin\Debug\Data.dll
+C:\privateproject\Tetris\Factories\bin\Debug\GraphicsTool.dll
+C:\privateproject\Tetris\Factories\bin\Debug\Common.pdb
+C:\privateproject\Tetris\Factories\bin\Debug\Data.pdb
+C:\privateproject\Tetris\Factories\bin\Debug\GraphicsTool.pdb
+C:\privateproject\Tetris\Factories\obj\Debug\Factories.csprojResolveAssemblyReference.cache
+C:\privateproject\Tetris\Factories\obj\Debug\Factories.dll
+C:\privateproject\Tetris\Factories\obj\Debug\Factories.pdb

@@ -1,0 +1,10 @@
+c:\Users\administrator\documents\visual studio 2013\Projects\Tetris\Common\bin\Debug\Common.dll
+c:\Users\administrator\documents\visual studio 2013\Projects\Tetris\Common\bin\Debug\Common.pdb
+c:\Users\administrator\documents\visual studio 2013\Projects\Tetris\Common\obj\Debug\Common.dll
+c:\Users\administrator\documents\visual studio 2013\Projects\Tetris\Common\obj\Debug\Common.pdb
+c:\Users\administrator\documents\visual studio 2013\Projects\Tetris\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+C:\privateproject\Tetris\Common\bin\Debug\Common.dll
+C:\privateproject\Tetris\Common\bin\Debug\Common.pdb
+C:\privateproject\Tetris\Common\obj\Debug\Common.dll
+C:\privateproject\Tetris\Common\obj\Debug\Common.pdb
+C:\privateproject\Tetris\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache

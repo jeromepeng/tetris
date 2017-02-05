@@ -1,0 +1,14 @@
+c:\Users\administrator\documents\visual studio 2013\Projects\Tetris\ActionControl\bin\Debug\ActionControl.dll
+c:\Users\administrator\documents\visual studio 2013\Projects\Tetris\ActionControl\bin\Debug\ActionControl.pdb
+c:\Users\administrator\documents\visual studio 2013\Projects\Tetris\ActionControl\obj\Debug\ActionControl.csprojResolveAssemblyReference.cache
+c:\Users\administrator\documents\visual studio 2013\Projects\Tetris\ActionControl\obj\Debug\ActionControl.dll
+c:\Users\administrator\documents\visual studio 2013\Projects\Tetris\ActionControl\obj\Debug\ActionControl.pdb
+C:\privateproject\Tetris\ActionControl\bin\Debug\ActionControl.dll
+C:\privateproject\Tetris\ActionControl\bin\Debug\ActionControl.pdb
+C:\privateproject\Tetris\ActionControl\obj\Debug\ActionControl.dll
+C:\privateproject\Tetris\ActionControl\obj\Debug\ActionControl.pdb
+D:\github\proj\Tetris\ActionControl\bin\Debug\ActionControl.dll
+D:\github\proj\Tetris\ActionControl\bin\Debug\ActionControl.pdb
+D:\github\proj\Tetris\ActionControl\obj\Debug\ActionControl.csprojResolveAssemblyReference.cache
+D:\github\proj\Tetris\ActionControl\obj\Debug\ActionControl.dll
+D:\github\proj\Tetris\ActionControl\obj\Debug\ActionControl.pdb
