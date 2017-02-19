@@ -20,3 +20,14 @@ C:\privateproject\Tetris\Factories\bin\Debug\GraphicsTool.pdb
 C:\privateproject\Tetris\Factories\obj\Debug\Factories.csprojResolveAssemblyReference.cache
 C:\privateproject\Tetris\Factories\obj\Debug\Factories.dll
 C:\privateproject\Tetris\Factories\obj\Debug\Factories.pdb
+F:\github\proj\Tetris\Factories\bin\Debug\Factories.dll
+F:\github\proj\Tetris\Factories\bin\Debug\Factories.pdb
+F:\github\proj\Tetris\Factories\bin\Debug\Common.dll
+F:\github\proj\Tetris\Factories\bin\Debug\Data.dll
+F:\github\proj\Tetris\Factories\bin\Debug\GraphicsTool.dll
+F:\github\proj\Tetris\Factories\bin\Debug\Common.pdb
+F:\github\proj\Tetris\Factories\bin\Debug\Data.pdb
+F:\github\proj\Tetris\Factories\bin\Debug\GraphicsTool.pdb
+F:\github\proj\Tetris\Factories\obj\Debug\Factories.csprojResolveAssemblyReference.cache
+F:\github\proj\Tetris\Factories\obj\Debug\Factories.dll
+F:\github\proj\Tetris\Factories\obj\Debug\Factories.pdb

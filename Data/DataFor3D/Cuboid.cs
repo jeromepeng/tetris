@@ -68,12 +68,43 @@ namespace Data.DataFor3D
 
         #region Private Method
         /// <summary>
-        /// Get all the point which should be shown in 3D.
+        /// Get all of the points which should be shown in 3D.
         /// </summary>
         /// <param name="projectPoint"></param>
         /// <param name="screenHeight"></param>
         /// <returns></returns>
         private void GetPointWithHide(Point3D projectPoint)
+        {
+            for (int i = 0; i < data.Count; i++)
+            {
+                List<Point3D> transactionPoints = new List<Point3D>();
+                Line projectLine = new Line(projectPoint, data[i], string.Empty);
+                bool showPoint = true;
+                for (int j = 0; j < planes.Count; j++)
+                {
+                    Point3D tempPt = planes[j].GetTransactionPointOfALine(projectLine);
+                    if (planes[j].IsPointInPlane(tempPt, true))
+                    {
+                        transactionPoints.Add(tempPt);
+                    }
+                }
+                for (int j = 0; j < transactionPoints.Count; j++)
+                {
+                    if (projectLine.IsPointInLine(transactionPoints[j]))
+                    {
+                        showPoint = false;
+                        break;
+                    }
+                }
+                data[i].Visiable = showPoint;
+            }
+        }
+
+        /// <summary>
+        /// Get all of the points which should be shown in 3D. (Hide behind other object will be considered)
+        /// </summary>
+        /// <param name="projectPoint"></param>
+        private void GetPointWithSpecificObjectHide(Point3D projectPoint, I3DData dataObject)
         {
             for (int i = 0; i < data.Count; i++)
             {
@@ -295,6 +326,76 @@ namespace Data.DataFor3D
                 }
             }
             return result;
+        }
+
+        /// <summary>
+        /// Get all of the planes which can be seen in any screen.
+        /// And all the planes which hide behind specific object won't be return.
+        /// </summary>
+        /// <param name="projectPoint"></param>
+        /// <param name="screen"></param>
+        /// <param name="screenHeight"></param>
+        /// <param name="parameter"></param>
+        /// <param name="specificObject"></param>
+        /// <returns></returns>
+        public List<I3DData> GetScreenPlaneWihtHideOnSpecificObjects(I3DData projectPoint, I3DData screen, double screenHeight, object parameter, I3DData specificObject)
+        {
+            List<I3DData> result = new List<I3DData>();
+            List<I3DData> tempResult = new List<I3DData>();
+            tempResult = GetScreenPlaneWithHide(projectPoint, screen, screenHeight, parameter);
+            for (int i = 0; i < tempResult.Count; i++)
+            {
+                Plane tempPlane = tempResult[i] as Plane;
+                int pointCount = tempPlane.DataPoint.Count;
+                int j;
+                for (j = 0; j < pointCount; j++)
+                {
+                    if (specificObject.IsPointHideBehindThisObject(projectPoint, screen, screenHeight, parameter, tempPlane.DataPoint[j]))
+                    {
+                        break;
+                    }
+                }
+                if (j == pointCount)
+                {
+                    result.Add(tempResult[i]);
+                }
+            }
+            return result;
+        }
+
+        /// <summary>
+        /// Is the point hide behind this object.
+        /// </summary>
+        /// <param name="projectPoint"></param>
+        /// <param name="screen"></param>
+        /// <param name="screenHeight"></param>
+        /// <param name="parameter"></param>
+        /// <param name="point"></param>
+        /// <returns></returns>
+        public bool IsPointHideBehindThisObject(I3DData projectPoint, I3DData screen, double screenHeight, object parameter, I3DData point)
+        {
+            bool showPoint = true;
+            List<Point3D> transactionPoints = new List<Point3D>();
+            Point3D projectPoint3D = projectPoint as Point3D;
+            Point3D pointToJugde = point as Point3D;
+            Line projectLine = new Line(projectPoint3D, pointToJugde, string.Empty);
+            for (int j = 0; j < planes.Count; j++)
+            {
+                Point3D tempPt = planes[j].GetTransactionPointOfALine(projectLine);
+                if (planes[j].IsPointInPlane(tempPt, true))
+                {
+                    transactionPoints.Add(tempPt);
+                }
+            }
+            for (int j = 0; j < transactionPoints.Count; j++)
+            {
+                if (projectLine.IsPointInLine(transactionPoints[j]))
+                {
+                    showPoint = false;
+                    break;
+                }
+            }
+            return !showPoint;
         }
         #endregion
     }

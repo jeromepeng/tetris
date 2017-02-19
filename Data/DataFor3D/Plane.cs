@@ -256,6 +256,37 @@ namespace Data.DataFor3D
             List<I3DData> result = new List<I3DData>();
             return result;
         }
+
+        /// <summary>
+        /// Get all of the planes which can be seen in any screen.
+        /// And all the planes which hide behind specific object won't be return.
+        /// </summary>
+        /// <param name="projectPoint"></param>
+        /// <param name="screen"></param>
+        /// <param name="screenHeight"></param>
+        /// <param name="parameter"></param>
+        /// <param name="specificObject"></param>
+        /// <returns></returns>
+        public List<I3DData> GetScreenPlaneWihtHideOnSpecificObjects(I3DData projectPoint, I3DData screen, double screenHeight, object parameter, I3DData specificObject)
+        {
+            List<I3DData> result = new List<I3DData>();
+            return result;
+        }
+
+        /// <summary>
+        /// Is the point hide behind this object.
+        /// </summary>
+        /// <param name="projectPoint"></param>
+        /// <param name="screen"></param>
+        /// <param name="screenHeight"></param>
+        /// <param name="parameter"></param>
+        /// <param name="point"></param>
+        /// <returns></returns>
+        public bool IsPointHideBehindThisObject(I3DData projectPoint, I3DData screen, double screenHeight, object parameter, I3DData point)
+        {
+            bool result = false;
+            return result;
+        }
         #endregion
     }
 }

@@ -12,3 +12,10 @@ C:\privateproject\Tetris\Data\bin\Debug\Common.pdb
 C:\privateproject\Tetris\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
 C:\privateproject\Tetris\Data\obj\Debug\Data.dll
 C:\privateproject\Tetris\Data\obj\Debug\Data.pdb
+F:\github\proj\Tetris\Data\bin\Debug\Data.dll
+F:\github\proj\Tetris\Data\bin\Debug\Data.pdb
+F:\github\proj\Tetris\Data\bin\Debug\Common.dll
+F:\github\proj\Tetris\Data\bin\Debug\Common.pdb
+F:\github\proj\Tetris\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
+F:\github\proj\Tetris\Data\obj\Debug\Data.dll
+F:\github\proj\Tetris\Data\obj\Debug\Data.pdb

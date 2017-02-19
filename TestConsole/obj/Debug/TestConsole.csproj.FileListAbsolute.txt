@@ -6,3 +6,11 @@ C:\privateproject\Tetris\TestConsole\bin\Debug\Common.pdb
 C:\privateproject\Tetris\TestConsole\obj\Debug\TestConsole.csprojResolveAssemblyReference.cache
 C:\privateproject\Tetris\TestConsole\obj\Debug\TestConsole.exe
 C:\privateproject\Tetris\TestConsole\obj\Debug\TestConsole.pdb
+F:\github\proj\Tetris\TestConsole\bin\Debug\TestConsole.exe.config
+F:\github\proj\Tetris\TestConsole\bin\Debug\TestConsole.exe
+F:\github\proj\Tetris\TestConsole\bin\Debug\TestConsole.pdb
+F:\github\proj\Tetris\TestConsole\bin\Debug\Common.dll
+F:\github\proj\Tetris\TestConsole\bin\Debug\Common.pdb
+F:\github\proj\Tetris\TestConsole\obj\Debug\TestConsole.csprojResolveAssemblyReference.cache
+F:\github\proj\Tetris\TestConsole\obj\Debug\TestConsole.exe
+F:\github\proj\Tetris\TestConsole\obj\Debug\TestConsole.pdb

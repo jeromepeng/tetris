@@ -12,3 +12,8 @@ D:\github\proj\Tetris\ActionControl\bin\Debug\ActionControl.pdb
 D:\github\proj\Tetris\ActionControl\obj\Debug\ActionControl.csprojResolveAssemblyReference.cache
 D:\github\proj\Tetris\ActionControl\obj\Debug\ActionControl.dll
 D:\github\proj\Tetris\ActionControl\obj\Debug\ActionControl.pdb
+F:\github\proj\Tetris\ActionControl\bin\Debug\ActionControl.dll
+F:\github\proj\Tetris\ActionControl\bin\Debug\ActionControl.pdb
+F:\github\proj\Tetris\ActionControl\obj\Debug\ActionControl.csprojResolveAssemblyReference.cache
+F:\github\proj\Tetris\ActionControl\obj\Debug\ActionControl.dll
+F:\github\proj\Tetris\ActionControl\obj\Debug\ActionControl.pdb

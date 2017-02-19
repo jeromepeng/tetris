@@ -8,3 +8,8 @@ C:\privateproject\Tetris\Common\bin\Debug\Common.pdb
 C:\privateproject\Tetris\Common\obj\Debug\Common.dll
 C:\privateproject\Tetris\Common\obj\Debug\Common.pdb
 C:\privateproject\Tetris\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+F:\github\proj\Tetris\Common\bin\Debug\Common.dll
+F:\github\proj\Tetris\Common\bin\Debug\Common.pdb
+F:\github\proj\Tetris\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+F:\github\proj\Tetris\Common\obj\Debug\Common.dll
+F:\github\proj\Tetris\Common\obj\Debug\Common.pdb

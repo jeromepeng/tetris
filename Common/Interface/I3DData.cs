@@ -57,5 +57,28 @@ namespace Common.Interface
         /// <param name="screenHeight"></param>
         /// <returns></returns>
         List<I3DData> GetScreenPlaneWithHide(I3DData projectPoint, I3DData screen, double screenHeight, object parameter);
+
+        /// <summary>
+        /// Get all of the planes which can be seen in any screen.
+        /// And all the planes which hide behind specific object won't be return.
+        /// </summary>
+        /// <param name="projectPoint"></param>
+        /// <param name="screen"></param>
+        /// <param name="screenHeight"></param>
+        /// <param name="parameter"></param>
+        /// <param name="specificObject"></param>
+        /// <returns></returns>
+        List<I3DData> GetScreenPlaneWihtHideOnSpecificObjects(I3DData projectPoint, I3DData screen, double screenHeight, object parameter, I3DData specificObject);
+
+        /// <summary>
+        /// Is the point hide behind this object.
+        /// </summary>
+        /// <param name="projectPoint"></param>
+        /// <param name="screen"></param>
+        /// <param name="screenHeight"></param>
+        /// <param name="parameter"></param>
+        /// <param name="point"></param>
+        /// <returns></returns>
+        bool IsPointHideBehindThisObject(I3DData projectPoint, I3DData screen, double screenHeight, object parameter, I3DData point);
     }
 }

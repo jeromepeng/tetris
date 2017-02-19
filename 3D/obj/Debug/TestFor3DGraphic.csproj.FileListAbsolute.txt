@@ -19,3 +19,15 @@ D:\github\proj\Tetris\3D\obj\Debug\3D.pdb
 F:\github\proj\Tetris\3D\bin\Debug\3D.exe.config
 F:\github\proj\Tetris\3D\obj\Debug\3D.exe
 F:\github\proj\Tetris\3D\obj\Debug\3D.pdb
+F:\github\proj\Tetris\3D\bin\Debug\3D.exe
+F:\github\proj\Tetris\3D\bin\Debug\3D.pdb
+F:\github\proj\Tetris\3D\bin\Debug\Common.dll
+F:\github\proj\Tetris\3D\bin\Debug\Data.dll
+F:\github\proj\Tetris\3D\bin\Debug\GraphicsTool.dll
+F:\github\proj\Tetris\3D\bin\Debug\Common.pdb
+F:\github\proj\Tetris\3D\bin\Debug\Data.pdb
+F:\github\proj\Tetris\3D\bin\Debug\GraphicsTool.pdb
+F:\github\proj\Tetris\3D\obj\Debug\TestFor3DGraphic.csprojResolveAssemblyReference.cache
+F:\github\proj\Tetris\3D\obj\Debug\TestFor3DGraphic.Form1.resources
+F:\github\proj\Tetris\3D\obj\Debug\_3D.Properties.Resources.resources
+F:\github\proj\Tetris\3D\obj\Debug\TestFor3DGraphic.csproj.GenerateResource.Cache

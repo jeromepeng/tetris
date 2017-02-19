@@ -19,6 +19,8 @@ namespace TestFor3DGraphic
     {
         private Graphics graphicFor3D;
 
+        private bool isHideByOtherObjects = true;
+
         List<Point3D> points3D = new List<Point3D>();
         List<int[]> planeIndex = new List<int[]>();
 
@@ -89,8 +91,8 @@ namespace TestFor3DGraphic
         {
             /*ChangeProject(5, 0);*/
             PanelForDrawing.Focus();
-            List<List<double[]>> result = stage.GetScreenPlaneOfOneObject("object1", this.PanelForDrawing.Height);
-            result.AddRange(stage.GetScreenPlaneOfOneObject("object2", this.PanelForDrawing.Height));
+            List<List<double[]>> result = stage.GetScreenPlaneOfOneObject("object1", this.PanelForDrawing.Height, isHideByOtherObjects);
+            result.AddRange(stage.GetScreenPlaneOfOneObject("object2", this.PanelForDrawing.Height, isHideByOtherObjects));
             DrawPlaneInList(result);
         }
 
@@ -101,8 +103,8 @@ namespace TestFor3DGraphic
             RTBInfo.Text = string.Empty;
             RTBInfo.Text = toDraw.InfoString();*/
             stage.RotateTheViewrAroundProjectPoint(e.Delta / 10, MoveType.Z);
-            List<List<double[]>> result = stage.GetScreenPlaneOfOneObject("object1", this.PanelForDrawing.Height);
-            result.AddRange(stage.GetScreenPlaneOfOneObject("object2", this.PanelForDrawing.Height));
+            List<List<double[]>> result = stage.GetScreenPlaneOfOneObject("object1", this.PanelForDrawing.Height, isHideByOtherObjects);
+            result.AddRange(stage.GetScreenPlaneOfOneObject("object2", this.PanelForDrawing.Height, isHideByOtherObjects));
             DrawPlaneInList(result);
             RTBInfo.Text = string.Empty;
             RTBInfo.Text = stage.StageDataInfo("object1");
@@ -117,8 +119,8 @@ namespace TestFor3DGraphic
             //stage.MoveViewer((e.NewValue - e.OldValue) * 3, MoveType.Z);
             stage.GetRealData("object1").Rotate((e.NewValue - e.OldValue) * 5, MoveType.Z, new double[3] { 300, 212, 200 });
             stage.GetRealData("object2").Rotate((e.NewValue - e.OldValue) * 5, MoveType.Z, new double[3] { 300, 212, 200 });
-            List<List<double[]>> result = stage.GetScreenPlaneOfOneObject("object1", this.PanelForDrawing.Height);
-            result.AddRange(stage.GetScreenPlaneOfOneObject("object2", this.PanelForDrawing.Height));
+            List<List<double[]>> result = stage.GetScreenPlaneOfOneObject("object1", this.PanelForDrawing.Height, isHideByOtherObjects);
+            result.AddRange(stage.GetScreenPlaneOfOneObject("object2", this.PanelForDrawing.Height, isHideByOtherObjects));
             RTBInfo.Text = string.Empty;
             RTBInfo.Text = stage.StageDataInfo("object1") + "\n" + stage.StageDataInfo("object2");
             //result.AddRange(stage.GetScreenPlaneOfOneObject("object2", this.PanelForDrawing.Height));
@@ -132,8 +134,8 @@ namespace TestFor3DGraphic
             RTBInfo.Text = string.Empty;
             RTBInfo.Text = toDraw.InfoString();*/
             stage.MoveViewer((e.NewValue - e.OldValue) * 3, MoveType.Z);
-            List<List<double[]>> result = stage.GetScreenPlaneOfOneObject("object1", this.PanelForDrawing.Height);
-            result.AddRange(stage.GetScreenPlaneOfOneObject("object2", this.PanelForDrawing.Height));
+            List<List<double[]>> result = stage.GetScreenPlaneOfOneObject("object1", this.PanelForDrawing.Height, isHideByOtherObjects);
+            result.AddRange(stage.GetScreenPlaneOfOneObject("object2", this.PanelForDrawing.Height, isHideByOtherObjects));
             DrawPlaneInList(result);
         }
 
@@ -182,7 +184,7 @@ namespace TestFor3DGraphic
         {
             graphicFor3D.Clear(Color.Gray);
             toDraw.Move(value, type);
-            List<Point3D> result = toDraw.GetScreenPointWithHide(projectPoint, this.PanelForDrawing.Height);
+            //List<Point3D> result = toDraw.GetScreenPointWithHide(projectPoint, this.PanelForDrawing.Height);
             List<Plane> planes = toDraw.GetScreenPlaneWithHide(projectPoint, this.PanelForDrawing.Height);
             /*for (int i = 0; i < result.Count; i++)
             {

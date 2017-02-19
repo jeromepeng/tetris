@@ -53,16 +53,50 @@ namespace GraphicsTool.DrawTools3D
         /// Get screen plane of specific object.
         /// </summary>
         /// <param name="key"></param>
+        /// <param name="isHideByOtherObjecs"></param>
         /// <returns></returns>
-        public List<List<double[]>> GetScreenPlaneOfOneObject(string key, double screenHeight)
+        public List<List<double[]>> GetScreenPlaneOfOneObject(string key, double screenHeight, bool isHideByOtherObjecs)
+        {
+            List<List<double[]>> result = new List<List<double[]>>();
+            if (isHideByOtherObjecs)
+            {
+                result = GetScreenPlaneOfAllObjects(key, screenHeight);
+            }
+            else
+            {
+                if (GetRealData(key).DataType() == Common.GraphicType.Cuboid)
+                {
+                    List<I3DData> resultPlane = GetRealData(key).GetScreenPlaneWithHide(viewer.ProjectPoint, viewer.Screen, screenHeight, 1);
+                    for (int i = 0; i < resultPlane.Count; i++)
+                    {
+                        result.Add(resultPlane[i].GetData() as List<double[]>);
+                    }
+                }
+            }
+            return result;
+        }
+
+        /// <summary>
+        /// Get all the planes of this stage, some plane will be invisiable if the object is hidded by other objects.
+        /// </summary>
+        /// <param name="screenHeight"></param>
+        /// <returns></returns>
+        public List<List<double[]>> GetScreenPlaneOfAllObjects(string key, double screenHeight)
         {
             List<List<double[]>> result = new List<List<double[]>>();
             if (GetRealData(key).DataType() == Common.GraphicType.Cuboid)
             {
-                List<I3DData> resultPlane = GetRealData(key).GetScreenPlaneWithHide(viewer.ProjectPoint, viewer.Screen, screenHeight, 1);
-                for (int i = 0; i < resultPlane.Count; i++)
+                foreach (KeyValuePair<string, I3DData> kvp in objects)
                 {
-                    result.Add(resultPlane[i].GetData() as List<double[]>);
+                    List<I3DData> resultPlane = new List<I3DData>();
+                    if (kvp.Key != key)
+                    {
+                        resultPlane = GetRealData(key).GetScreenPlaneWihtHideOnSpecificObjects(viewer.ProjectPoint, viewer.Screen, screenHeight, 1, kvp.Value);
+                    }
+                    for (int i = 0; i < resultPlane.Count; i++)
+                    {
+                        result.Add(resultPlane[i].GetData() as List<double[]>);
+                    }
                 }
             }
             return result;
