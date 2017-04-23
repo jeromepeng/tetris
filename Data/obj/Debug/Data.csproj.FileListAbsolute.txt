@@ -19,3 +19,10 @@ F:\github\proj\Tetris\Data\bin\Debug\Common.pdb
 F:\github\proj\Tetris\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
 F:\github\proj\Tetris\Data\obj\Debug\Data.dll
 F:\github\proj\Tetris\Data\obj\Debug\Data.pdb
+E:\github\proj\Tetris\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
+E:\github\proj\Tetris\Data\bin\Debug\Data.dll
+E:\github\proj\Tetris\Data\bin\Debug\Data.pdb
+E:\github\proj\Tetris\Data\bin\Debug\Common.dll
+E:\github\proj\Tetris\Data\bin\Debug\Common.pdb
+E:\github\proj\Tetris\Data\obj\Debug\Data.dll
+E:\github\proj\Tetris\Data\obj\Debug\Data.pdb

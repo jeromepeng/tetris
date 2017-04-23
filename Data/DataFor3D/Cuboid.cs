@@ -25,6 +25,9 @@ namespace Data.DataFor3D
         /// </summary>
         private List<Plane> planes = new List<Plane>();
 
+        /// <summary>
+        /// Key of this data.
+        /// </summary>
         private string key = string.Empty;
         #endregion
 
@@ -396,6 +399,14 @@ namespace Data.DataFor3D
                 }
             }
             return !showPoint;
+        }
+
+        /// <summary>
+        /// Gets the style of the data.
+        /// </summary>
+        public DataStyle Style
+        {
+            get;
         }
         #endregion
     }

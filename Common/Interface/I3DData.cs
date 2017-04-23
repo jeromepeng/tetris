@@ -50,6 +50,11 @@ namespace Common.Interface
         string GetKey();
 
         /// <summary>
+        /// Gets the style of the data.
+        /// </summary>
+        DataStyle Style { get; }
+
+        /// <summary>
         /// Get all of the planes which can be seen in any screen.
         /// </summary>
         /// <param name="projectPoint"></param>

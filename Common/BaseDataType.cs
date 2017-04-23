@@ -344,4 +344,58 @@ namespace Common
         Plane = 2,
         Cuboid = 3
     }
+
+    /// <summary>
+    /// Used to stored the style of a graphic data.
+    /// Such as color or something else.
+    /// </summary>
+    public class DataStyle
+    {
+        #region Property
+        /// <summary>
+        /// Gets the color information (A, R, G, B) of a data.
+        /// </summary>
+        public int[] ColorInfo
+        {
+            get
+            {
+                return colorInfo;
+            }
+        }
+        #endregion
+
+        #region Private
+        /// <summary>
+        /// Store the information of color.
+        /// </summary>
+        private int[] colorInfo = new int[4] { 0, 0, 0, 0 };
+        #endregion
+
+        #region Construction
+        /// <summary>
+        /// Constructor of this class.
+        /// </summary>
+        public DataStyle()
+        {
+
+        }
+
+        /// <summary>
+        /// Constructor of this class.
+        /// </summary>
+        /// <param name="styleStr">String to store the style information.</param>
+        public DataStyle(string styleStr)
+        {
+            string[] splitStyle = styleStr.Split(';');
+            if (splitStyle.Length > 3)
+            {
+                for (int i = 0; i < 4; i++)
+                {
+                    colorInfo[i] = int.Parse(splitStyle[i]);
+                }
+            }
+        }
+        #endregion
+
+    }
 }

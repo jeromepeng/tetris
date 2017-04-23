@@ -34,6 +34,11 @@ namespace Data.DataFor3D
         /// Key of this line.
         /// </summary>
         private string key = string.Empty;
+
+        /// <summary>
+        /// Restore the DataStyle.
+        /// </summary>
+        private DataStyle style;
         #endregion
 
         #region Constructor
@@ -87,6 +92,17 @@ namespace Data.DataFor3D
             return CalculatorFor3D.IsNumberBetweenTwoNumber(pt.Data[0], point1.Data[0], point2.Data[0]) &&
                 CalculatorFor3D.IsNumberBetweenTwoNumber(pt.Data[1], point1.Data[1], point2.Data[1]) &&
                 CalculatorFor3D.IsNumberBetweenTwoNumber(pt.Data[2], point1.Data[2], point2.Data[2]);
+        }
+
+        /// <summary>
+        /// Gets the style of this plane.
+        /// </summary>
+        public DataStyle Style
+        {
+            get
+            {
+                return style;
+            }
         }
         #endregion
 

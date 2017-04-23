@@ -19,7 +19,7 @@ namespace TestFor3DGraphic
     {
         private Graphics graphicFor3D;
 
-        private bool isHideByOtherObjects = true;
+        private bool isHideByOtherObjects = false;
 
         List<Point3D> points3D = new List<Point3D>();
         List<int[]> planeIndex = new List<int[]>();
@@ -213,7 +213,7 @@ namespace TestFor3DGraphic
                     drawPoint[j].X = (float)plane[i][j][0];
                     drawPoint[j].Y = (float)plane[i][j][1];
                 }
-                graphicFor3D.DrawPolygon(new Pen(Color.Red), drawPoint);
+                graphicFor3D.FillPolygon(new SolidBrush(Color.Red), drawPoint, System.Drawing.Drawing2D.FillMode.Winding);
             }
         }
     }

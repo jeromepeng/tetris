@@ -14,3 +14,11 @@ F:\github\proj\Tetris\TestConsole\bin\Debug\Common.pdb
 F:\github\proj\Tetris\TestConsole\obj\Debug\TestConsole.csprojResolveAssemblyReference.cache
 F:\github\proj\Tetris\TestConsole\obj\Debug\TestConsole.exe
 F:\github\proj\Tetris\TestConsole\obj\Debug\TestConsole.pdb
+E:\github\proj\Tetris\TestConsole\bin\Debug\TestConsole.exe.config
+E:\github\proj\Tetris\TestConsole\bin\Debug\TestConsole.exe
+E:\github\proj\Tetris\TestConsole\bin\Debug\TestConsole.pdb
+E:\github\proj\Tetris\TestConsole\bin\Debug\Common.dll
+E:\github\proj\Tetris\TestConsole\bin\Debug\Common.pdb
+E:\github\proj\Tetris\TestConsole\obj\Debug\TestConsole.csprojResolveAssemblyReference.cache
+E:\github\proj\Tetris\TestConsole\obj\Debug\TestConsole.exe
+E:\github\proj\Tetris\TestConsole\obj\Debug\TestConsole.pdb

@@ -19,3 +19,10 @@ F:\github\proj\Tetris\GraphicsTool\bin\Debug\Common.pdb
 F:\github\proj\Tetris\GraphicsTool\obj\Debug\GraphicsTool.csprojResolveAssemblyReference.cache
 F:\github\proj\Tetris\GraphicsTool\obj\Debug\GraphicsTool.dll
 F:\github\proj\Tetris\GraphicsTool\obj\Debug\GraphicsTool.pdb
+E:\github\proj\Tetris\GraphicsTool\bin\Debug\GraphicsTool.dll
+E:\github\proj\Tetris\GraphicsTool\bin\Debug\GraphicsTool.pdb
+E:\github\proj\Tetris\GraphicsTool\bin\Debug\Common.dll
+E:\github\proj\Tetris\GraphicsTool\bin\Debug\Common.pdb
+E:\github\proj\Tetris\GraphicsTool\obj\Debug\GraphicsTool.csprojResolveAssemblyReference.cache
+E:\github\proj\Tetris\GraphicsTool\obj\Debug\GraphicsTool.dll
+E:\github\proj\Tetris\GraphicsTool\obj\Debug\GraphicsTool.pdb

@@ -39,6 +39,11 @@ namespace Data.DataFor3D
         /// Key of this plane.
         /// </summary>
         private string key = string.Empty;
+
+        /// <summary>
+        /// Restore the DataStyle.
+        /// </summary>
+        private DataStyle style;
         #endregion
 
         #region Constructor
@@ -175,6 +180,17 @@ namespace Data.DataFor3D
             get
             {
                 return dataPoint;
+            }
+        }
+
+        /// <summary>
+        /// Gets the style of this plane.
+        /// </summary>
+        public DataStyle Style
+        {
+            get
+            {
+                return style;
             }
         }
         #endregion

@@ -18,3 +18,14 @@ F:\github\proj\Tetris\UnitTestProjectForRotate\bin\Debug\zh-Hans\Microsoft.Visua
 F:\github\proj\Tetris\UnitTestProjectForRotate\obj\Debug\UnitTestProjectForRotate.csprojResolveAssemblyReference.cache
 F:\github\proj\Tetris\UnitTestProjectForRotate\obj\Debug\UnitTestProjectForRotate.dll
 F:\github\proj\Tetris\UnitTestProjectForRotate\obj\Debug\UnitTestProjectForRotate.pdb
+E:\github\proj\Tetris\UnitTestProjectForRotate\obj\Debug\UnitTestProjectForRotate.csprojResolveAssemblyReference.cache
+E:\github\proj\Tetris\UnitTestProjectForRotate\bin\Debug\UnitTestProjectForRotate.dll
+E:\github\proj\Tetris\UnitTestProjectForRotate\bin\Debug\UnitTestProjectForRotate.pdb
+E:\github\proj\Tetris\UnitTestProjectForRotate\bin\Debug\Common.dll
+E:\github\proj\Tetris\UnitTestProjectForRotate\bin\Debug\Data.dll
+E:\github\proj\Tetris\UnitTestProjectForRotate\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+E:\github\proj\Tetris\UnitTestProjectForRotate\bin\Debug\Common.pdb
+E:\github\proj\Tetris\UnitTestProjectForRotate\bin\Debug\Data.pdb
+E:\github\proj\Tetris\UnitTestProjectForRotate\bin\Debug\zh-Hans\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+E:\github\proj\Tetris\UnitTestProjectForRotate\obj\Debug\UnitTestProjectForRotate.dll
+E:\github\proj\Tetris\UnitTestProjectForRotate\obj\Debug\UnitTestProjectForRotate.pdb

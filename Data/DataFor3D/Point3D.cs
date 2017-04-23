@@ -29,6 +29,11 @@ namespace Data.DataFor3D
         /// Is the poing visiable.
         /// </summary>
         private bool visiable = true;
+
+        /// <summary>
+        /// Restore the DataStyle.
+        /// </summary>
+        private DataStyle style;
         #endregion
 
         #region Constructor
@@ -91,6 +96,17 @@ namespace Data.DataFor3D
             get
             {
                 return visiable;
+            }
+        }
+
+        /// <summary>
+        /// Gets the style of this plane.
+        /// </summary>
+        public DataStyle Style
+        {
+            get
+            {
+                return style;
             }
         }
         #endregion
