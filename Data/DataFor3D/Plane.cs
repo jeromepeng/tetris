@@ -51,9 +51,10 @@ namespace Data.DataFor3D
         /// Constructor
         /// </summary>
         /// <param name="points"></param>
-        public Plane(List<Point3D> points, string key)
+        public Plane(List<Point3D> points, string key, DataStyle style)
         {
             this.key = key;
+            this.style = style;
             if (points.Count > 2)
             {
                 planeRange[0] = planeRange[1] = points[0].Data[0];

@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Common.Interface;
 
 
 namespace TestFor3DGraphic
@@ -39,7 +40,7 @@ namespace TestFor3DGraphic
             screenPoints.Add(new Point3D(new double[3] { 0, 100, 0 }, string.Empty));
             screenPoints.Add(new Point3D(new double[3] { 100, 0, 0 }, string.Empty));
             screenPoints.Add(new Point3D(new double[3] { 100, 0, 100 }, string.Empty));
-            Plane screen = new Plane(screenPoints, string.Empty);
+            Plane screen = new Plane(screenPoints, string.Empty, new DataStyle("255;255;0;0"));
             Point3D screenProjectPoint = new Point3D(new double[3] { 0, 0, 50 }, string.Empty);
             NormalViewer viewer = new NormalViewer(screen, screenProjectPoint);
             stage = new Stage(viewer);
@@ -59,7 +60,7 @@ namespace TestFor3DGraphic
             planeIndex.Add(new int[4] { 6, 7, 4, 5 });
             planeIndex.Add(new int[4] { 6, 5, 1, 2 });
             planeIndex.Add(new int[4] { 6, 7, 3, 2 });
-            toDraw = new Cuboid(points3D, planeIndex, "object1");
+            toDraw = new Cuboid(points3D, planeIndex, "object1", new List<string> {"255;255;0;0","255;0;255;0","255;0;0;255", "255;255;0;0", "255;0;255;0", "255;0;0;255" });
             stage.AddData(toDraw);
             points3D.Clear();
             planeIndex.Clear();
@@ -77,7 +78,7 @@ namespace TestFor3DGraphic
             planeIndex.Add(new int[4] { 6, 7, 4, 5 });
             planeIndex.Add(new int[4] { 6, 5, 1, 2 });
             planeIndex.Add(new int[4] { 6, 7, 3, 2 });
-            toDraw = new Cuboid(points3D, planeIndex, "object2");
+            toDraw = new Cuboid(points3D, planeIndex, "object2", new List<string> { "255;255;0;0", "255;0;255;0", "255;0;0;255", "255;255;0;0", "255;0;255;0", "255;0;0;255" });
             stage.AddData(toDraw);
             //graphicFor3D.DrawEllipse(new Pen(Color.Black), 100, 100, 100, 100);
             /*for (int i = 0 ; i < 8 ; i++)
@@ -91,7 +92,7 @@ namespace TestFor3DGraphic
         {
             /*ChangeProject(5, 0);*/
             PanelForDrawing.Focus();
-            List<List<double[]>> result = stage.GetScreenPlaneOfOneObject("object1", this.PanelForDrawing.Height, isHideByOtherObjects);
+            List<I3DData> result = stage.GetScreenPlaneOfOneObject("object1", this.PanelForDrawing.Height, isHideByOtherObjects);
             result.AddRange(stage.GetScreenPlaneOfOneObject("object2", this.PanelForDrawing.Height, isHideByOtherObjects));
             DrawPlaneInList(result);
         }
@@ -103,7 +104,7 @@ namespace TestFor3DGraphic
             RTBInfo.Text = string.Empty;
             RTBInfo.Text = toDraw.InfoString();*/
             stage.RotateTheViewrAroundProjectPoint(e.Delta / 10, MoveType.Z);
-            List<List<double[]>> result = stage.GetScreenPlaneOfOneObject("object1", this.PanelForDrawing.Height, isHideByOtherObjects);
+            List<I3DData> result = stage.GetScreenPlaneOfOneObject("object1", this.PanelForDrawing.Height, isHideByOtherObjects);
             result.AddRange(stage.GetScreenPlaneOfOneObject("object2", this.PanelForDrawing.Height, isHideByOtherObjects));
             DrawPlaneInList(result);
             RTBInfo.Text = string.Empty;
@@ -119,7 +120,7 @@ namespace TestFor3DGraphic
             //stage.MoveViewer((e.NewValue - e.OldValue) * 3, MoveType.Z);
             stage.GetRealData("object1").Rotate((e.NewValue - e.OldValue) * 5, MoveType.Z, new double[3] { 300, 212, 200 });
             stage.GetRealData("object2").Rotate((e.NewValue - e.OldValue) * 5, MoveType.Z, new double[3] { 300, 212, 200 });
-            List<List<double[]>> result = stage.GetScreenPlaneOfOneObject("object1", this.PanelForDrawing.Height, isHideByOtherObjects);
+            List<I3DData> result = stage.GetScreenPlaneOfOneObject("object1", this.PanelForDrawing.Height, isHideByOtherObjects);
             result.AddRange(stage.GetScreenPlaneOfOneObject("object2", this.PanelForDrawing.Height, isHideByOtherObjects));
             RTBInfo.Text = string.Empty;
             RTBInfo.Text = stage.StageDataInfo("object1") + "\n" + stage.StageDataInfo("object2");
@@ -134,7 +135,7 @@ namespace TestFor3DGraphic
             RTBInfo.Text = string.Empty;
             RTBInfo.Text = toDraw.InfoString();*/
             stage.MoveViewer((e.NewValue - e.OldValue) * 3, MoveType.Z);
-            List<List<double[]>> result = stage.GetScreenPlaneOfOneObject("object1", this.PanelForDrawing.Height, isHideByOtherObjects);
+            List<I3DData> result = stage.GetScreenPlaneOfOneObject("object1", this.PanelForDrawing.Height, isHideByOtherObjects);
             result.AddRange(stage.GetScreenPlaneOfOneObject("object2", this.PanelForDrawing.Height, isHideByOtherObjects));
             DrawPlaneInList(result);
         }
@@ -214,6 +215,21 @@ namespace TestFor3DGraphic
                     drawPoint[j].Y = (float)plane[i][j][1];
                 }
                 graphicFor3D.FillPolygon(new SolidBrush(Color.Red), drawPoint, System.Drawing.Drawing2D.FillMode.Winding);
+            }
+        }
+
+        private void DrawPlaneInList(List<I3DData> plane)
+        {
+            graphicFor3D.Clear(Color.Gray);
+            for (int i = 0; i < plane.Count; i++)
+            {
+                PointF[] drawPoint = new PointF[4];
+                for (int j = 0; j < 4; j++)
+                {
+                    drawPoint[j].X = (float)((Plane)plane[i]).DataPoint[j].Data[0];
+                    drawPoint[j].Y = (float)((Plane)plane[i]).DataPoint[j].Data[1];
+                }
+                graphicFor3D.FillPolygon(new SolidBrush(Color.FromArgb(plane[i].Style.ColorInfo[0], plane[i].Style.ColorInfo[1], plane[i].Style.ColorInfo[2], plane[i].Style.ColorInfo[3])), drawPoint, System.Drawing.Drawing2D.FillMode.Winding);
             }
         }
     }

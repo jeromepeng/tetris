@@ -36,7 +36,7 @@ namespace Data.DataFor3D
         /// Constructor.
         /// </summary>
         /// <param name="pointData"></param>
-        public Cuboid(List<Point3D> pointData, List<int[]> planePointIndex, string key)
+        public Cuboid(List<Point3D> pointData, List<int[]> planePointIndex, string key, List<string> style)
         {
             this.key = key;
             if (pointData.Count == 8)
@@ -59,7 +59,7 @@ namespace Data.DataFor3D
                     {
                         pointsOfPlane.Add(data[planePointIndex[i][j]]);
                     }
-                    planes.Add(new Plane(pointsOfPlane, string.Empty));
+                    planes.Add(new Plane(pointsOfPlane, string.Empty, new DataStyle(style[i])));
                 }
             }
             else
@@ -196,7 +196,7 @@ namespace Data.DataFor3D
                     {
                         points2D.Add(new Point3D(PointTransfer.TransferPointFrom3DToScreen2D(planes[i].DataPoint[j].Data, projectPoint.Data, screenHeight), string.Empty));
                     }
-                    Plane plane2D = new Plane(points2D, string.Empty);
+                    Plane plane2D = new Plane(points2D, string.Empty, planes[i].Style);
                     result.Add(plane2D);
                 }
             }
@@ -323,7 +323,7 @@ namespace Data.DataFor3D
                             double[] transactionPoint = CalculatorFor3D.TransactionBetweenLineAndPlane(screenPlane.Cofactors, projectLine.Constant, projectLine.Vector);
                             points2D.Add(new Point3D(PointTransfer.TransferPointFrom3DToScreen2DWithScreenOfAnyAngle(transactionPoint, screenPlane.DataPoint[leftBottomPointIndex].Data, screenHeight), string.Empty));
                         }
-                        Plane plane2D = new Plane(points2D, string.Empty);
+                        Plane plane2D = new Plane(points2D, string.Empty, planes[i].Style);
                         result.Add(plane2D);
                     }
                 }

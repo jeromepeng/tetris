@@ -55,9 +55,9 @@ namespace GraphicsTool.DrawTools3D
         /// <param name="key"></param>
         /// <param name="isHideByOtherObjecs"></param>
         /// <returns></returns>
-        public List<List<double[]>> GetScreenPlaneOfOneObject(string key, double screenHeight, bool isHideByOtherObjecs)
+        public List<I3DData> GetScreenPlaneOfOneObject(string key, double screenHeight, bool isHideByOtherObjecs)
         {
-            List<List<double[]>> result = new List<List<double[]>>();
+            List<I3DData> result = new List<I3DData>();
             if (isHideByOtherObjecs)
             {
                 result = GetScreenPlaneOfAllObjects(key, screenHeight);
@@ -69,7 +69,7 @@ namespace GraphicsTool.DrawTools3D
                     List<I3DData> resultPlane = GetRealData(key).GetScreenPlaneWithHide(viewer.ProjectPoint, viewer.Screen, screenHeight, 1);
                     for (int i = 0; i < resultPlane.Count; i++)
                     {
-                        result.Add(resultPlane[i].GetData() as List<double[]>);
+                        result.Add(resultPlane[i]);
                     }
                 }
             }
@@ -81,9 +81,9 @@ namespace GraphicsTool.DrawTools3D
         /// </summary>
         /// <param name="screenHeight"></param>
         /// <returns></returns>
-        public List<List<double[]>> GetScreenPlaneOfAllObjects(string key, double screenHeight)
+        public List<I3DData> GetScreenPlaneOfAllObjects(string key, double screenHeight)
         {
-            List<List<double[]>> result = new List<List<double[]>>();
+            List<I3DData> result = new List<I3DData>();
             if (GetRealData(key).DataType() == Common.GraphicType.Cuboid)
             {
                 foreach (KeyValuePair<string, I3DData> kvp in objects)
@@ -95,7 +95,7 @@ namespace GraphicsTool.DrawTools3D
                     }
                     for (int i = 0; i < resultPlane.Count; i++)
                     {
-                        result.Add(resultPlane[i].GetData() as List<double[]>);
+                        result.Add(resultPlane[i]);
                     }
                 }
             }
