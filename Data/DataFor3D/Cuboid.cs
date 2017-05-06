@@ -203,9 +203,6 @@ namespace Data.DataFor3D
             return result;
         }
 
-        
-
-        
         #endregion
 
         #region Interface Method
@@ -232,6 +229,17 @@ namespace Data.DataFor3D
         public GraphicType DataType()
         {
             return GraphicType.Cuboid;
+        }
+
+        /// <summary>
+        /// The gravity center of this shape.
+        /// </summary>
+        public I3DData GravityCenter
+        {
+            get
+            {
+                return new Point3D(new double[] { 0, 0, 0}, string.Empty);
+            }
         }
 
         /// <summary>

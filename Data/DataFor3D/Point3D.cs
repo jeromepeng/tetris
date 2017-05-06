@@ -109,6 +109,17 @@ namespace Data.DataFor3D
                 return style;
             }
         }
+
+        /// <summary>
+        /// The gravity center of this shape.
+        /// </summary>
+        public I3DData GravityCenter
+        {
+            get
+            {
+                return new Point3D(data[0], string.Empty);
+            }
+        }
         #endregion
 
         #region Interface Method

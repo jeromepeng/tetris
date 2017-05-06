@@ -44,6 +44,11 @@ namespace Data.DataFor3D
         /// Restore the DataStyle.
         /// </summary>
         private DataStyle style;
+
+        /// <summary>
+        /// Gravity center of this plane.
+        /// </summary>
+        private Point3D gravityCenter = new Point3D(new double[] { 0, 0, 0}, string.Empty);
         #endregion
 
         #region Constructor
@@ -72,6 +77,7 @@ namespace Data.DataFor3D
                     planeRange[5] = planeRange[5] > points[i].Data[2] ? points[i].Data[2] : planeRange[5];
                 }
                 cofactors = GetCofactors();
+                gravityCenter = GetGravityCenter();
             }
             else
             {
@@ -94,6 +100,25 @@ namespace Data.DataFor3D
             1, dataPoint[1].Data[0], dataPoint[1].Data[1], dataPoint[1].Data[2],
             1, dataPoint[2].Data[0], dataPoint[2].Data[1], dataPoint[2].Data[2]});
             result = MatrixAdv.GetCofactorOfOneLine(calculateMatrix, 0);
+            return result;
+        }
+
+        /// <summary>
+        /// Get the gravity center of this shape.
+        /// </summary>
+        /// <returns></returns>
+        public Point3D GetGravityCenter()
+        {
+            Point3D result = new Point3D(new double[] { 0, 0, 0 }, string.Empty);
+            for (int i = 0; i < dataPoint.Count; i++)
+            {
+                result.Data[0] += dataPoint[i].Data[0];
+                result.Data[1] += dataPoint[i].Data[1];
+                result.Data[2] += dataPoint[i].Data[2];
+            }
+            result.Data[0] = result.Data[0] / dataPoint.Count;
+            result.Data[1] = result.Data[1] / dataPoint.Count;
+            result.Data[2] = result.Data[2] / dataPoint.Count;
             return result;
         }
 
@@ -222,6 +247,17 @@ namespace Data.DataFor3D
         public object GetData()
         {
             return data;
+        }
+
+        /// <summary>
+        /// The gravity center of this shape.
+        /// </summary>
+        public I3DData GravityCenter
+        {
+            get
+            {
+                return gravityCenter;
+            }
         }
 
         /// <summary>

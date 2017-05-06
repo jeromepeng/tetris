@@ -60,7 +60,7 @@ namespace TestFor3DGraphic
             planeIndex.Add(new int[4] { 6, 7, 4, 5 });
             planeIndex.Add(new int[4] { 6, 5, 1, 2 });
             planeIndex.Add(new int[4] { 6, 7, 3, 2 });
-            toDraw = new Cuboid(points3D, planeIndex, "object1", new List<string> {"255;255;0;0","255;0;255;0","255;0;0;255", "255;255;0;0", "255;0;255;0", "255;0;0;255" });
+            toDraw = new Cuboid(points3D, planeIndex, "object1", new List<string> {"255;255;0;0","255;0;255;0","255;0;0;255", "255;255;255;0", "255;0;255;255", "255;255;0;255" });
             stage.AddData(toDraw);
             points3D.Clear();
             planeIndex.Clear();
@@ -78,7 +78,7 @@ namespace TestFor3DGraphic
             planeIndex.Add(new int[4] { 6, 7, 4, 5 });
             planeIndex.Add(new int[4] { 6, 5, 1, 2 });
             planeIndex.Add(new int[4] { 6, 7, 3, 2 });
-            toDraw = new Cuboid(points3D, planeIndex, "object2", new List<string> { "255;255;0;0", "255;0;255;0", "255;0;0;255", "255;255;0;0", "255;0;255;0", "255;0;0;255" });
+            toDraw = new Cuboid(points3D, planeIndex, "object2", new List<string> { "255;255;0;0", "255;0;255;0", "255;0;0;255", "255;255;255;0", "255;0;255;255", "255;255;0;255" });
             stage.AddData(toDraw);
             //graphicFor3D.DrawEllipse(new Pen(Color.Black), 100, 100, 100, 100);
             /*for (int i = 0 ; i < 8 ; i++)
@@ -220,6 +220,27 @@ namespace TestFor3DGraphic
 
         private void DrawPlaneInList(List<I3DData> plane)
         {
+            plane.Sort((x, y) => {
+                int compareResult;
+                double[] dataX = x.GravityCenter.GetData() as double[];
+                double[] dataY = y.GravityCenter.GetData() as double[];
+                if (dataX[2] == dataY[2])
+                {
+                    compareResult = 0;
+                }
+                else
+                {
+                    if (dataX[2] > dataY[2])
+                    {
+                        compareResult = 1;
+                    }
+                    else
+                    {
+                        compareResult = -1;
+                    }
+                }
+                return compareResult;
+            });
             graphicFor3D.Clear(Color.Gray);
             for (int i = 0; i < plane.Count; i++)
             {

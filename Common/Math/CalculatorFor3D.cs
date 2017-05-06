@@ -205,7 +205,7 @@ namespace Common.Math
         static public double[] TransferPointFromVirtual2DToScreen2D(double[] point, double screenHeight)
         {
             double[] result = new double[2] { 0.0, 0.0 };
-            if (point.Length == 2)
+            if (point.Length >= 2)
             {
                 result[0] = point[0];
                 result[1] = screenHeight - point[1];

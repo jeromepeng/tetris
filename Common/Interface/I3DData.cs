@@ -55,6 +55,11 @@ namespace Common.Interface
         DataStyle Style { get; }
 
         /// <summary>
+        /// The gravity center of this shape.
+        /// </summary>
+        I3DData GravityCenter { get; }
+
+        /// <summary>
         /// Get all of the planes which can be seen in any screen.
         /// </summary>
         /// <param name="projectPoint"></param>

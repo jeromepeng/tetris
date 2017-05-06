@@ -127,6 +127,17 @@ namespace Data.DataFor3D
         }
 
         /// <summary>
+        /// The gravity center of this shape.
+        /// </summary>
+        public I3DData GravityCenter
+        {
+            get
+            {
+                return new Point3D(new double[] { 0, 0, 0 }, string.Empty);
+            }
+        }
+
+        /// <summary>
         /// Get data.
         /// </summary>
         public object GetData()

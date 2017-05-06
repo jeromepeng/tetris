@@ -41,14 +41,19 @@ namespace Common.Math
         /// <returns></returns>
         public static double[] TransferPointFrom3DToScreen2DWithScreenOfAnyAngle(double[] pointOf3D, double[] leftBottomPoint, double screenHeight)
         {
-            double[] result = new double[2] { 0.0, 0.0 };
+            double[] result = new double[3] { 0.0, 0.0, 0.0 };
+            double[] temp2DResult = new double[2] { 0.0, 0.0 };
             if (pointOf3D.Length == 3 && leftBottomPoint.Length == 3)
             {
                 double[] tempResult = CalculatorFor3D.TransferPointFromSpace3DToVirtual3D(pointOf3D);
                 double[] bottomLinePoint1 = CalculatorFor3D.TransferPointFromSpace3DToVirtual3D(leftBottomPoint);
                 result[1] = tempResult[1] - bottomLinePoint1[1];
                 result[0] = System.Math.Sqrt(System.Math.Pow(tempResult[0] - bottomLinePoint1[0], 2) + System.Math.Pow(tempResult[2] - bottomLinePoint1[2], 2));
-                result = CalculatorFor3D.TransferPointFromVirtual2DToScreen2D(result, screenHeight);
+                temp2DResult = CalculatorFor3D.TransferPointFromVirtual2DToScreen2D(result, screenHeight);
+                //Add deepth information for every plan.
+                result[0] = temp2DResult[0];
+                result[1] = temp2DResult[1];
+                result[2] = pointOf3D[0];
             }
             return result;
         }
