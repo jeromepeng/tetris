@@ -236,7 +236,7 @@ namespace TestFor3DGraphic
                     }
                     else
                     {
-                        compareResult = -11;
+                        compareResult = -1;
                     }
                 }
                 return compareResult;
