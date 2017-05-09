@@ -230,13 +230,13 @@ namespace TestFor3DGraphic
                 }
                 else
                 {
-                    if (dataX[2] > dataY[2])
+                    if (dataX[2] < dataY[2])
                     {
                         compareResult = 1;
                     }
                     else
                     {
-                        compareResult = -1;
+                        compareResult = -11;
                     }
                 }
                 return compareResult;

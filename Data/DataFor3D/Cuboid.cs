@@ -330,6 +330,7 @@ namespace Data.DataFor3D
                             Line projectLine = new Line(projectPoint3D, planes[i].DataPoint[j], string.Empty);
                             double[] transactionPoint = CalculatorFor3D.TransactionBetweenLineAndPlane(screenPlane.Cofactors, projectLine.Constant, projectLine.Vector);
                             points2D.Add(new Point3D(PointTransfer.TransferPointFrom3DToScreen2DWithScreenOfAnyAngle(transactionPoint, screenPlane.DataPoint[leftBottomPointIndex].Data, screenHeight), string.Empty));
+                            points2D[j].Data[2] = planes[i].DataPoint[j].Data[1];//Add y axis information to make sure that all the plan will be drawn in right order, then you can not see the objec behind another object.
                         }
                         Plane plane2D = new Plane(points2D, string.Empty, planes[i].Style);
                         result.Add(plane2D);

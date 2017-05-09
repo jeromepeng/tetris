@@ -53,7 +53,6 @@ namespace Common.Math
                 //Add deepth information for every plan.
                 result[0] = temp2DResult[0];
                 result[1] = temp2DResult[1];
-                result[2] = pointOf3D[0];
             }
             return result;
         }
