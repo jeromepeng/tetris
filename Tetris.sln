@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tetris", "Tetris\Tetris.csproj", "{F2F3CD12-CD23-4A95-BE79-C31FFB81D883}"
 EndProject
@@ -22,6 +22,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SIFTTest", "SIFTTest\SIFTTest.csproj", "{6DA4BBB9-EB04-42BD-A64A-04223182CD61}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFor3DGraphic", "3D\TestFor3DGraphic.csproj", "{ED13799B-7944-4F8D-A2B1-8F97F1A5910D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Doc", "Doc", "{D13515F1-E2B2-4656-AF4A-39AB8A56BE33}"
+	ProjectSection(SolutionItems) = preProject
+		Doc\3D Graphic.pptx = Doc\3D Graphic.pptx
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
