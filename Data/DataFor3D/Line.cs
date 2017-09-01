@@ -70,7 +70,7 @@ namespace Data.DataFor3D
         }
 
         /// <summary>
-        /// Get the constatn of a line.
+        /// Get the constant of a line.
         /// </summary>
         public double[] Constant
         {
